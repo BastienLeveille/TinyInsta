@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html ng-app="TinyInsta">
+  <head>
+  	<meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
+  	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+    <script src="tinyinstascript.js"></script>
+    <title>Tiny Insta</title>  </head>
+
+  <body ng-controller="TController"  font-family: Comic sans MS">
+    <h1>Hello in Tiny Insta!</h1>
+
+    <table>
+      <tr>
+        <td colspan="2" style="font-weight:bold;">Available Servlets:</td>        
+      </tr>
+      <tr>
+        <td><a href='/hello'>The servlet</a></td>
+      </tr>
+    </table>
+    
+   <!-- Creation d'un compte User -->
+    
+    <form  ng-submit="register()">
+    	<div>
+    		<Label> Pseudo : <input type="text" placeHolder= "Pseudo" ng-model="pseudo"></Label>
+    		<Label> Email : <input type="text" placeHolder= "email" ng-model="email"></Label>
+    		<label>MDP : <input type="password" placeHolder="mdp" ng-model="mdp">  </label>
+    		<Label> Nom : <input type="text" placeHolder= "nom" ng-model="nom"></Label>
+    		<Label> Prenom : <input type="text" placeHolder= "prenom" ng-model="prenom"></Label>
+    	</div>
+    	<button type="submit" class="btn btn-default">Inscription</button>
+    </form>
+    
+    <!-- login d'un User -->
+     
+    <form ng-submit="login()" >
+    	<div>
+    		<Label> Pseudo : <input type="text" placeHolder= "Pseudo"></Label>
+    		<label> MDP : <input type="password" placeHolder="mdp">  </label>
+    		
+    	</div>
+    	<button type="submit" class="btn btn-default">Se connecter</button>
+    </form>
+    
+    
+       
+        <script>
+		var init = function() {
+			console.log("init called");
+			window.init();
+		};
+	</script>
+
+    <script src="https://apis.google.com/js/client.js?onload=init"></script>
+  </body>
+</html>
